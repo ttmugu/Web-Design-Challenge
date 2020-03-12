@@ -1,9 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web Design Challenge</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Lattitute</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  plot
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./landingpages/temprature.html">Temperature</a>
+                  <a class="dropdown-item" href="./landingpages/humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="./landingpages/cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="./landingpages/wind-speed.html">Wind-speed</a>
+              </div>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./landingpages/comparisions.html">Comparisons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./landingpages/data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <!--------------->
+  <section id="body_home"> 
+
+    <div class="row">
+
+      <div class = "col-md-8 front_description" >
+        <main class="container1">
+          <header>
+              <h1>Summary: Lattitude vs. X</h1>
+          </header>
+              <section class="introduction">
+                  <figure id="main_figure">
+                    <!-- <figcaption>latitude_Max-Temperature</figcaption> -->
+                    <img  id="main_fig" src="./Resources/assets/images/City_Latitude-Max_Temp.png" alt="latitude_Max-Temperature" style="width:300px;height:300px;float:left">
+                  </figure>
+                  <p class ="front_para"> &nbsp &nbsp &nbsp &nbsp The purpose of this project was to analyze how weather changes as you get closer to equator. 
+                    To accomplish this analysis, we first pulled data from the OpenWeatherMap API 
+                    to assemble a dataset on over 500 cities.</p>
+              
+                  <p class ="front_para"> &nbsp &nbsp &nbsp &nbsp After assembling the dataset, we used <a href="https://github.com/ttmugu/python-api-challenge">Matplotlib</a> to plot various aspects of the weather vs latitude.  Factors we looked as include:
+                    temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis,
+                    as well as explanations and descriptions of any trends and correlations witnessed.
+                  </p>
+              </section>
+         </main> 
+      </div>
+
+      <div class="col-md-4">
+          
+        <main class="container2">
+            <header>
+                <h2>Visualizations</h2>
+            </header>
+        <!--Normally these medium columns go full wide on small screen sizes-->
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-6">
+              <figure id="Vis_figure">
+                <a href="./landingpages/temprature.html">
+                  <img src="./Resources/assets/images/City_Latitude-Max_Temp.png" alt="latitude_Max-Temperature" style="width:150px;height:150px;">
+                </a>
+                </figure>
+    
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-6">
+              <figure id="Vis_figure">
+                <a href="./landingpages/cloudiness.html">
+                  <img   src="./Resources/assets/images/City_Latitude-Cloudiness.png" alt="latitude_Cloudiness" style="width:150px;height:150px;">
+                  </a>
+                </figure>
+          </div>
+        <!-- </div> -->
+
+        <!-- <div class="row"> -->
+            <div class="col-xs-3 col-sm-3 col-md-6">
+                <figure id="Vis_figure">
+                  <a href="./landingpages/humidity.html">
+                    <img   src="./Resources/assets/images/City_Latitude-Humidity.png" alt="latitude_humidity" style="width:150px;height:150px;">
+                    </a>  
+                </figure>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-6">
+                <figure id="Vis_figure">
+                  <a href="./landingpages/wind-speed.html">
+                    <img  src="./Resources/assets/images/City_Latitude-Wind_Speed.png" alt="latitude_wind-speed" style="width:150px;height:150px;">
+                    </a>  
+                </figure>
+            </div>
+          </div>
+        </main>
+</div>   
+
+</section>
 
 
-
-
-
+</body>
 
 </html>
